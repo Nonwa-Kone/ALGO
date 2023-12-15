@@ -1,0 +1,22 @@
+ALGORITHM compter
+VAR
+    phrase: STRING;
+    nbre_mot, nbre_voyelle, t_phrase: INTEGER = 0;
+BEGIN
+    Write("Entrer une phrase");
+    Read(phrase);
+    t_phrase := phrase.length;
+
+    FOR(i FROM 0 TO phrase.length - 1 STEP 1) DO
+        IF(phrase[i] = " ") THEN
+            nbre_mot := nbre_mot++
+        END_IF
+        IF(phrase[i] = "a" OR phrase[i] = "e" OR phrase[i] = "i" OR phrase[i] = "o" OR phrase[i] = "u" OR phrase[i] = "y") THEN
+            nbre_voyelle++
+        END_IF
+    END_FOR
+
+    Write("Taille de la phrase " + phrase)
+    Write("Nombre de mot " + nbre_mot)
+    Write("Nombre de voyelle " + nbre_voyelle)
+END
